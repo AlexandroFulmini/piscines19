@@ -33,7 +33,7 @@ char	*ft_strcapitalize(char *str)
     int x;
     
     x = 0;
-	*ft_lowercase(str);
+    ft_lowercase(str);
     while(str[x] != '\0')
     {
 		if (str[0] >= 97 && str[0] <= 122)
@@ -44,12 +44,12 @@ char	*ft_strcapitalize(char *str)
 		{
 			if(str[x+1] >= 97 && str[x+1] <= 122)
 			{
-				str[x+1] +=32;
+				str[x+1] -=32;
 			}
 		}
 		x++;
     }
-	return (0);
+	return (str);
 }
   
 int		main(void)
@@ -58,6 +58,6 @@ int		main(void)
 
 	str = "salut les potes la s19school est trop bien";
 	*ft_strcapitalize(str);
-	printf("new : %s \n", *ft_strcapitalize(str));
+	printf("new : %s \n", ft_strcapitalize(str));
 	return (0);
 }

@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
 int		ft_str_is_alpha(char *str)
 {
 	int x;
@@ -20,11 +17,9 @@ int		ft_str_is_alpha(char *str)
 	x = 0;
 	while (str[x] != '\0')
 	{
-		if (!((str[x] <= 64 && str[x] >= 91)
-					&& (str[x] <= 96 && str[x] >= 123)))
-		{
+		if (!((str[x] >= 65 && str[x] <= 90)
+					|| (str[x] >= 97 && str[x] <= 122)))
 			return (0);
-		}
 		x++;
 	}
 	return (1);

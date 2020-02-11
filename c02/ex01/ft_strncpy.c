@@ -23,6 +23,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	while (x < n)
 	{
 		dest[x] = '\0';
+        x++;
 	}
-	return (dest[x]);
+	return (dest);
 }
