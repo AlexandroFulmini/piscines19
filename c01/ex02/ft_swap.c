@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 18:18:06 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/08 18:27:41 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/09 18:17:31 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 void	ft_swap(int *a, int *b)
 {
-	int x =*a;
+	int x;
+
+	x = *a;
 	*a = *b;
 	*b = x;
-}
-
-int		main()
-{
-	int a;
-	int b;
-	b = 20;
-	a = 10;
-	ft_swap(a,b);
-	return(0);
 }

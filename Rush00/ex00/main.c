@@ -3,13 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: adenguir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/08 12:42:13 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/08 13:22:15 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/08 10:54:39 by adenguir          #+#    #+#             */
+/*   Updated: 2020/02/08 17:55:49 by adenguir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	rush(int x, int y);
 
-
+int		main(void)
+{
+	rush(-2, 5);
+	return (0);
+}

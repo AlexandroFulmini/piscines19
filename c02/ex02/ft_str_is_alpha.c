@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 15:19:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/09 11:01:00 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/10 15:43:25 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/11 16:17:11 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_ultimate_ft(int *********nbr)
+int		ft_str_is_alpha(char *str)
 {
-	*********nbr = 42;
+	int x;
+
+	x = 0;
+	while (str[x] != '\0')
+	{
+		if (!((str[x] <= 64 && str[x] >= 91)
+					&& (str[x] <= 96 && str[x] >= 123)))
+		{
+			return (0);
+		}
+		x++;
+	}
+	return (1);
 }
+

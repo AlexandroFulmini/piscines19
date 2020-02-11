@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 15:19:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/09 11:01:00 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/11 09:17:59 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/11 16:19:23 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ultimate_ft(int *********nbr)
+int		ft_str_is_uppercase(char *str)
 {
-	*********nbr = 42;
+	int x;
+
+	x = 0;
+	while (str[x] != '\0')
+	{
+		if ((str[x] < 65 && str[x] > 90))
+		{
+			return (0);
+		}
+		x++;
+	}
+	return (1);
 }

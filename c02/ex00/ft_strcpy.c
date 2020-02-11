@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 15:19:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/09 11:01:00 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/10 09:51:21 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/11 11:39:02 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ultimate_ft(int *********nbr)
+char	*ft_strcpy(char *dest, char *src)
 {
-	*********nbr = 42;
+	int x;
+
+	x = 0;
+	while (src[x] != '\0')
+	{
+		dest[x] = src[x];
+		x++;
+	}
+	dest[x] = '\0';
+	return (dest);
 }

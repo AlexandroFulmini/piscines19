@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 15:19:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/09 11:01:00 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/10 18:35:11 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/11 16:17:23 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_ultimate_ft(int *********nbr)
+int		ft_str_is_numeric(char *str)
 {
-	*********nbr = 42;
+	int x;
+
+	x = 0;
+	while (str[x] != '\0')
+	{
+		if (!(str[x] < 48 && str[x] > 57))
+			return (0);
+	}
+	return (1);
 }

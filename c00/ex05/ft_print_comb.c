@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 15:23:51 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/08 16:30:32 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/09 19:32:32 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,11 @@ void	ft_print_comb(void)
 				ft_putchar(b);
 				ft_putchar(c);
 				if (a != '7' || b != '8' || c != '9')
-					write(1, ", ", 1);
+					write(1, ", ", 2);
 				c++;
 			}
 			b++;
 		}
 		a++;
 	}
-}
-
-
-int		main ()
-{
-	ft_print_comb();
-	return(0);
 }

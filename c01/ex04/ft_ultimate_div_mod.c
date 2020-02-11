@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 15:19:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/09 11:01:00 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/09 11:18:50 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/10 11:30:45 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*********nbr = 42;
+	int x;
+	int y;
+
+	x = *a / *b;
+	y = *a % *b;
+	*a = x;
+	*b = y;
 }

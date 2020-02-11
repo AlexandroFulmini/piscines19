@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/07 15:19:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/09 11:01:00 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/09 16:05:13 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/11 09:27:13 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_ultimate_ft(int *********nbr)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	*********nbr = 42;
+	int x;
+	int y;
+	int tabtempo[size];
+
+	x = 0;
+	y = size - 1;
+	while (x < y)
+	{
+		tabtempo[x] = tab[size];
+		x++;
+		size--;
+	}
+	x = 0;
+	while (x < y)
+	{
+		tab[x] = tabtempo[x];
+		x++;
+	}
 }
