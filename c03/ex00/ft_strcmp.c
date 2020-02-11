@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 15:43:25 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 19:41:23 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/11 18:46:16 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/11 19:40:44 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-int		ft_str_is_alpha(char *str)
+int		ft_strcmp(char *s1, char *s2)
 {
 	int x;
-
+	
 	x = 0;
-	while (str[x] != '\0')
+	while (s1[x] != '\0' && s2[x] !='\0')
 	{
-		if (!((str[x] <= 64 && str[x] >= 91)
-					&& (str[x] <= 96 && str[x] >= 123)))
+		if ( s1[x] != s2[x])
 		{
-			return (0);
+			return (s1[x] - s2[x])
 		}
 		x++;
 	}
-	return (1);
+	return (s1[x] - s2[x]);
 }
