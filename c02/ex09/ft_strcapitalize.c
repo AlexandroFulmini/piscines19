@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 12:01:56 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 15:43:44 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:02:35 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strcapitalize(char *str)
     int x;
     
     x = 0;
-    ft_lowercase(str);
+    *ft_lowercase(str);
     while(str[x] != '\0')
     {
 		if (str[0] >= 97 && str[0] <= 122)
@@ -56,8 +56,7 @@ int		main(void)
 {
 	char *str;
 
-	str = "salut les potes la s19school est trop bien";
-	*ft_strcapitalize(str);
+	str = "salut les potes la s19school est trop bien";	
 	printf("new : %s \n", ft_strcapitalize(str));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 16:25:42 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 19:48:54 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 17:13:55 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ unsigned	int		ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		return (y);
 	}
-	while ((src[x]) && (x < size - 1))
+	while ((src[x]) && (y < size - 1))
 	{
 		dest[x] = src[x];
 		y++;

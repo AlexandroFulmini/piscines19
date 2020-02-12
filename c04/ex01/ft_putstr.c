@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:19:55 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 17:20:02 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/12 17:41:57 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/12 17:43:41 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+#include <unistd.h>
+
+void		ft_putchar(char c)
 {
-	unsigned int x;
-	unsigned int y;
-	
+	write (1, &c, 1);
+}
+
+void		ft_putstr(char *str)
+{
+	int x;
+
 	x = 0;
-	y = 0;
-	while (dest[x])
-		x++;
-	while (y < nb && src[y])
+	while (str[x])
 	{
-		dest[x + y] = src[y];
-		y++;
+		ft_putchar(str[x]);
+		x++;
 	}
-	dest[x + j] = '\0';
-	return(dest);
 }
