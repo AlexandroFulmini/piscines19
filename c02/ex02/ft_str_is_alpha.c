@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 15:43:25 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 18:04:21 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 19:30:12 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@ int	ft_str_is_alpha(char *str)
 	int x;
 
 	x = 0;
+	if (src[x] = '\0')
+		return (1);
 	while (str[x])
 	{
-		if (!(str[x] >= 64 && str[x] <= 90)||
-			(str[x] >= 97 && str[x] <= 122)))
+		if ((str[x] < 64 || str[x] > 90)
+				&& (str[x] < 97 || str[x] > 122))
 		{
-		return (0);
+			return (0);
 		}
 		x++;
 	}

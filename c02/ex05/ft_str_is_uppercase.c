@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 09:17:59 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 16:19:23 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 19:30:55 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@ int	ft_str_is_uppercase(char *str)
 	int x;
 
 	x = 0;
+	if (str[x] = '\0')
+		return (0);
 	while (str[x])
 	{
-		if (!(str[x] >= 65 && str[x] <= 90))
+		if ((str[x] != 97 || str[x] != 122) && (str[x] < 65 || str[x] > 90))
 		{
 			return (0);
 		}

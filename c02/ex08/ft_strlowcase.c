@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:24:24 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 19:55:50 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 19:05:16 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	*ft_strlowcase(char *str)
 	int x;
 
 	x = 0;
-	while (str[x])
+	while (str[x] != '\0')
 	{
 		if (str[x] >= 65 && str[x] <= 90)
 		{

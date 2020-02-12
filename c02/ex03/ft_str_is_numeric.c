@@ -6,24 +6,24 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 18:35:11 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 16:17:23 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 19:44:18 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_numeric(char *str)
+int		ft_str_is_numeric(char *str)
 {
 	int x;
 
 	x = 0;
 	while (str[x])
 	{
-		if (!(str[x] >= 48 && str[x] <= 57)
+		if (!(str[x] >= 48 && str[x] <= 57))
 		{
 			return (0);
-        	}
-	x++;
+		}
+		x++;
 	}
 	return (1);
 }
