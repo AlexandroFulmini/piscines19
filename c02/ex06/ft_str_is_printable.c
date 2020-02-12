@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 09:37:12 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 16:19:42 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:09:31 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_str_is_printable(char *str)
 	x = 0;
 	while (str[x])
 	{
-		if (str[x] < 33 || str[x] > 126)
+		if (str[x] < 32 || str[x] > 126)
 		{
 			return (0);
 		}
