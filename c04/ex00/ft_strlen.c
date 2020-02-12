@@ -6,15 +6,9 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 17:28:52 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 17:40:44 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/12 20:03:00 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-
-void	ft_puthar(char c)
-{
-	write(1, &c,1);
-}
 
 int		ft_strlen(char *str)
 {
