@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
 	int x;
 
 	x = 0;
-	while (str[x] != '\0')
+	while (str[x])
 	{
 		if (str[x] >= 97 && str[x] <= 122)
 		{

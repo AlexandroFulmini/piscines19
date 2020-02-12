@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*ft_strlowcase(char *str)
+int	*ft_strlowcase(char *str)
 {
 	int x;
 
 	x = 0;
-	while (str[x] != '\0')
+	while (str[x])
 	{
 		if (str[x] >= 65 && str[x] <= 90)
 		{
