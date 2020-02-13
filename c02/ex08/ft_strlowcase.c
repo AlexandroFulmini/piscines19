@@ -6,11 +6,11 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:24:24 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 19:05:16 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:41:30 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int x;
 

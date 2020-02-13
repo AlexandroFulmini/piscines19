@@ -6,20 +6,20 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 18:46:16 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 19:40:44 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/13 15:40:02 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(char *s1, char *s2)
 {
 	int x;
-	
+
 	x = 0;
-	while (s1[x] != '\0' && s2[x] !='\0')
+	while (s1[x] != '\0' && s2[x] != '\0')
 	{
-		if ( s1[x] != s2[x])
+		if (s1[x] != s2[x])
 		{
-			return (s1[x] - s2[x])
+			return (s1[x] - s2[x]);
 		}
 		x++;
 	}

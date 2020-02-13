@@ -6,13 +6,13 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 12:01:56 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 19:41:43 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:45:39 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		*ft_strlowercase(char *str)
+char	*ft_strlowercase(char *str)
 {
 	int x;
 
@@ -21,7 +21,7 @@ int		*ft_strlowercase(char *str)
 	{
 		if (str[x] >= 65 && str[x] <= 90)
 		{
-			str[x] = srt[x] + 32;
+			str[x] = str[x] + 32;
 		}
 		x++;
 	}
@@ -33,7 +33,7 @@ char	*ft_strcapitalize(char *str)
 	int x;
 
 	x = 0;
-	ft_lowercase(str);
+	ft_strlowercase(str);
 	while (str[x])
 	{
 		if (!((str[x - 1] >= 65 && str[x - 1] <= 90) ||

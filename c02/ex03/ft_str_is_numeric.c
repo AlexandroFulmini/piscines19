@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 18:35:11 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 19:44:18 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:51:27 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ int		ft_str_is_numeric(char *str)
 	int x;
 
 	x = 0;
+	if (str[x] == '\0')
+		return (1);
 	while (str[x])
 	{
-		if (!(str[x] >= 48 && str[x] <= 57))
+		if ((str[x] < 48 || str[x] > 57))
 		{
 			return (0);
 		}

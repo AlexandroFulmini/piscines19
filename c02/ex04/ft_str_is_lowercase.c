@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 09:11:31 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/12 19:44:35 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:48:19 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@ int	ft_str_is_lowercase(char *str)
 	int x;
 
 	x = 0;
-	if (str[x] = '\0')
+	if (str[x] == '\0')
 		return (1);
 	while (str[x])
 	{
-		if ((str[x] <= 97 && str[x] >= 122))
+		if ((str[x] < 97 || str[x] > 122))
 		{
 			return (0);
 		}
