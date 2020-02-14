@@ -6,11 +6,9 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 19:18:52 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/13 15:40:57 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/13 17:18:17 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
