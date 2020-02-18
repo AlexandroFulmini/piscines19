@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 17:45:16 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/18 16:37:57 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/18 18:14:09 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	long int nbr;
+	long nbr;
 
 	nbr = nb;
 	if (nb < 0)
