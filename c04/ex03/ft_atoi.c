@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 09:45:41 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/14 14:24:20 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/17 12:39:22 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,4 @@ int		ft_atoi(char *str)
 	}
 	result = result * posorneg;
 	return (result);
-}
-
-int		main()
-{
-	char str[50] = "  ----+38478 friends";
-	ft_atoi(str);
-	printf(" %d \n" , ft_atoi(str));
 }

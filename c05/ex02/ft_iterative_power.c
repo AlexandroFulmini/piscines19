@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:41:57 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/17 12:37:55 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/17 10:33:04 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/17 20:20:59 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void		ft_putchar(char c)
+int		ft_iterative_power(int nb, int power)
 {
-	write(1, &c, 1);
-}
+	int n;
 
-void		ft_putstr(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x])
+	n = nb;
+	if ((nb == 0) || (power == 0))
+		return (1);
+	if ((nb < 0) || (power < 0))
+		return (0);
+	while (power > 1)
 	{
-		ft_putchar(str[x]);
-		x++;
+		nb = nb * n;
+		power--;
 	}
+	return (nb);
 }

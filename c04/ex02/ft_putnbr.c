@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 17:45:16 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/13 18:11:44 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/18 16:37:57 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int n)
+void	ft_putnbr(int nb)
 {
-	unsigned int nb;
+	long int nbr;
 
-	nb = n;
-	if (n < 0)
+	nbr = nb;
+	if (nb < 0)
 	{
 		ft_putchar('-');
-		nb = n * -1;
+		nbr = nb * -1;
 	}
-	if (n > 9)
+	if (nbr > 9)
 	{
-		ft_putnbr(nb / 10);
+		ft_putnbr(nbr / 10);
 	}
-	ft_putchar(nb % 10 + '0')
+	ft_putchar(nbr % 10 + '0');
 }

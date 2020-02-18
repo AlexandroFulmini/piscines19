@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:41:57 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/17 12:37:55 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/17 16:14:39 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/17 20:21:43 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void		ft_putchar(char c)
+int		ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	int i;
+	int result;
 
-void		ft_putstr(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x])
+	result = 0;
+	i = 0;
+	while (i <= nb / 2)
 	{
-		ft_putchar(str[x]);
-		x++;
+		result = i * i;
+		if (nb == result)
+			return (i);
+		i++;
 	}
+	return (0);
 }

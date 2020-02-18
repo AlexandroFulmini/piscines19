@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:41:57 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/17 12:37:55 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/17 17:52:21 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/17 20:19:25 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void		ft_putchar(char c)
+int		ft_is_prime(int nb)
 {
-	write(1, &c, 1);
-}
+	int i;
 
-void		ft_putstr(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x])
-	{
-		ft_putchar(str[x]);
-		x++;
-	}
+	i = 2;
+	if (nb <= 1)
+		return (0);
+	while (nb % i != 0)
+		i++;
+	if (nb == i)
+		return (1);
+	else
+		return (0);
 }

@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 17:41:57 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/17 12:37:55 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/18 16:50:13 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/18 17:46:25 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef 
 
-void		ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
-void		ft_putstr(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x])
-	{
-		ft_putchar(str[x]);
-		x++;
-	}
-}
+void ft_putchar(char c);
+void ft_swap(int *a, int *b);
+void ft_putstr(char *str);
+int ft_strlen(char *str);
+int ft_strcmp(char *s1, char *s2);
