@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 09:40:43 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/18 17:54:46 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/18 18:55:15 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ int		main(int argc, char **argv)
 	int i;
 	
 	i = 0;
-	(void)argv;
-	while (argv[0])
-	{
-		ft_pustr(argv[0]);
-	}
+	(void)argc;
+	ft_putstr(argv[0]);
 	ft_putchar('\n');
 }
