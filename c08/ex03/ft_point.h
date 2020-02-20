@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/17 16:14:39 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/20 18:27:10 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/19 17:18:09 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/20 16:12:07 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int nb)
-{
-	int i;
-	int result;
+#ifndef _FT_POINT_H
+# define _FT_POINT_H
 
-	result = 0;
-	i = 1;
-	while (i <= nb / i)
-	{
-		result = i * i;
-		if (nb == result)
-			return (i);
-		i++;
-	}
-	return (0);
-}
+typedef	struct	s_point
+{
+	int x;
+	int y;
+}				t_point	
+#endif
