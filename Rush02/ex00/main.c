@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 17:18:09 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/21 10:06:08 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/22 13:07:42 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/22 17:59:51 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include "library.h"
 
-#ifndef _FT_POINT_H
-# define _FT_POINT_H
-
-typedef	struct	s_point
+int		main(int argc, char **argv)
 {
-	int x;
-	int y;
-}				t_point;	
-#endif
+	if (argc > 3 || argc < 1)
+	{
+		ft_putstr("Error");
+		ft_putchar("\n");
+	}
+	if (argc}

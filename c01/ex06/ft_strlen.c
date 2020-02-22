@@ -6,9 +6,10 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 11:56:52 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/11 09:32:44 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/22 20:34:27 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)

@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 17:18:09 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/21 10:06:08 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/22 20:25:34 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/22 20:34:00 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _FT_POINT_H
-# define _FT_POINT_H
-
-typedef	struct	s_point
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int x;
-	int y;
-}				t_point;	
-#endif
+	int i;
+	int j;
+	int rev;
+
+	size = size - 1;
+	i = 0;
+	while (i == 0)
+	{
+		j = 1;
+		i = 0;
+		while (j < size)
+		{
+			if (tab[j] > tab[j + 1])
+			{
+				rev = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = rev;
+				i = 0;
+			}
+		}
+		j++;
+	}
+}

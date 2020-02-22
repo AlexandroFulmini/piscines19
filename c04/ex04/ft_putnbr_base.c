@@ -1,48 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_join.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 11:17:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/19 18:58:30 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/22 20:37:39 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/22 20:45:31 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdlib.h>
 
-int		ft_strlen(char *str)
+void	ft_putchar(char c)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return(i);
+	write(1, &c, 1);
 }
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest)
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	int i;
-	int j;
-	int k;
-}
