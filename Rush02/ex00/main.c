@@ -3,20 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: odelvaux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/22 13:07:42 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/22 17:59:51 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/22 16:57:18 by odelvaux          #+#    #+#             */
+/*   Updated: 2020/02/23 21:51:04 by odelvaux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
-#include "library.h"
+#include <stdlib.h>
+#include "mylib.h"
 
 int		main(int argc, char **argv)
 {
-	if (argc > 3 || argc < 1)
+	char *buffer;
+
+	if (argc > 3 || argc == 1)
 	{
-		ft_putstr("Error");
-		ft_putchar("\n");
+		ft_putstr("Error\n");
+		return (1);
 	}
-	if (argc}
+	else if (argc == 2)
+	{
+		if (ft_check_number(argv[1]) == 0)
+			return (0);
+		buffer = ft_open_read_default();
+		ft_convert_full_nbr(argv[1], buffer);
+		free(buffer);
+	}
+	else if (argc == 3)
+	{
+		if (ft_check_number(argv[2]) == 0)
+			return (0);
+		buffer = ft_open_read_argv(argv[1]);
+		ft_convert_full_nbr(argv[2], buffer);
+		free(buffer);
+	}
+	return (0);
+}
