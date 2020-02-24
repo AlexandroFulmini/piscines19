@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 10:07:17 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/24 11:42:20 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/24 11:12:08 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/24 11:14:23 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
 	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
-}
-
-int		main(int argc, char **argv)
-{
-	(void)argc;
-	int i;
-	i = argc;
-	while (i > 1)
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		ft_putstr(argv[i - 1]);
-		ft_putchar('\n');
-		i--;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	return (0);
+	return (s1[i] - s2[i]);
 }

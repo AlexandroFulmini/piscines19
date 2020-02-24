@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 10:07:17 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/24 11:42:20 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/24 11:03:52 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/24 11:09:47 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,8 @@ void	ft_putstr(char *str)
 
 	i = 0;
 	while (str[i])
-		ft_putchar(str[i++]);
-}
-
-int		main(int argc, char **argv)
-{
-	(void)argc;
-	int i;
-	i = argc;
-	while (i > 1)
 	{
-		ft_putstr(argv[i - 1]);
-		ft_putchar('\n');
-		i--;
+		ft_putchar(str[i]);
+		i++;
 	}
-	return (0);
 }

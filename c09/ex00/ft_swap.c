@@ -1,41 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 10:07:17 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/24 11:42:20 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/24 11:02:27 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/24 11:03:35 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
-}
+	int x;
 
-void	ft_putstr(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
-}
-
-int		main(int argc, char **argv)
-{
-	(void)argc;
-	int i;
-	i = argc;
-	while (i > 1)
-	{
-		ft_putstr(argv[i - 1]);
-		ft_putchar('\n');
-		i--;
-	}
-	return (0);
+	x = *a;
+	*a = *b;
+	*b = x;
 }
