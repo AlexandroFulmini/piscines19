@@ -6,20 +6,20 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 11:17:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/22 15:39:52 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/25 17:29:31 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_strlen(char *str)
+int		ft_strlen(char *sep)
 {
 	int i;
 
 	i = 0;
-	while (str[i])
+	while (sep[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 char	*ft_strcat(char *dest, char *src)
@@ -35,42 +35,51 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		dest[i] = src[j];
 		j++;
+		i++;
 	}
 	dest[i] = '\0';
-	return (dest)
+	return (dest);
 }
 
 int		ft_totalen(int size, char **strs, char *sep)
 {
 	int i;
 	int total;
-	
+
 	i = 0;
 	total = 0;
 	while (i < size)
 	{
-		total = total + strlen(str[i]);
+		total = total + ft_strlen(strs[i]);
 		i++;
 	}
-	total = total + (size - 1) * strlen(sep) + 1;
+	total = total + (size - 1) * ft_strlen(sep) + 1;
 	return (total);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int i;
-	int *dest;
+	int		i;
+	char	*dest;
 
 	i = 0;
 	if (size < 0)
-		return(0);
+		return (0);
 	if (size == 0)
 	{
 		dest = malloc(sizeof(char));
 		dest[i] = '\0';
 		return (dest);
 	}
-	if (!(dest = malloc(sizeof(strlen + 1) * 
+	if (!(dest = malloc(sizeof(char) * ft_totalen(size, strs, sep))))
+		return (0);
+	dest[i] = '\0';
+	while (i < size)
+	{
+		ft_strcat(dest, strs[i]);
+		if (i < size - 1)
+			ft_strcat(dest, sep);
+		i++;
+	}
+	return (dest);
 }
-
-int		

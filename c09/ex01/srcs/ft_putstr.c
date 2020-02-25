@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 12:41:10 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/25 20:15:55 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/24 11:03:52 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/24 11:09:47 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-int		*ft_range(int min, int max)
+void	ft_putchar(char c)
 {
-	int		*tab;
-	int		size;
-	int		i;
-	int		j;
-	
-	if (min >= max)
-		return (0);
-	size = max - min;
-	if (!(tab = malloc((size) * sizeof(int))))
-		return (0);
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int i;
+
 	i = 0;
-	j = min;
-	while (j < size)
+	while (str[i])
 	{
-		tab[i] = j;
+		ft_putchar(str[i]);
 		i++;
-		j++;
 	}
-	return (tab);
 }
