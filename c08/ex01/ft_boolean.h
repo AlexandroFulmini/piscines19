@@ -6,14 +6,14 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 13:54:24 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/19 15:50:06 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/25 20:41:48 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _FT_BOOLEAN_H
-# define FT_BOOLEAN_H
+# define _FT_BOOLEAN_H
 
-#include <unistd.h>
+# include <unistd.h>
 
 # define EVEN_MSG "I have an even number of arguments.\n"
 # define ODD_MSG "I have an odd number of arguments.\n"

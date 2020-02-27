@@ -5,26 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 11:03:52 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/24 11:09:47 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/27 12:55:26 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/27 13:12:37 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_putstr(char *str)
 {
 	int i;
 
 	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	while (str[i++])
+		write (1, &str[i], 1);
 }

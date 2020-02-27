@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 11:01:44 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/24 11:33:53 by afulmini         ###   ########.fr       */
+/*   Created: 2020/02/27 12:54:50 by afulmini          #+#    #+#             */
+/*   Updated: 2020/02/27 12:55:20 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putcahr(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
