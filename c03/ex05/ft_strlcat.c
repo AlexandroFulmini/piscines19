@@ -6,7 +6,7 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 20:46:44 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/27 17:50:41 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/27 19:38:21 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int total;
 
 	i = 0;
-	i = 0;
+	j = 0;
 	total = 0;
 	while (dest[i] != '\0' && i < size)
 		i++;
