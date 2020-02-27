@@ -6,11 +6,11 @@
 /*   By: afulmini <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 20:46:44 by afulmini          #+#    #+#             */
-/*   Updated: 2020/02/22 20:52:00 by afulmini         ###   ########.fr       */
+/*   Updated: 2020/02/27 17:50:41 by afulmini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
 	unsigned int j;
